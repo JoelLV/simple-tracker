@@ -1,0 +1,15 @@
+Current detected bugs in project:
+1) The program does not initialize if the user edits incorrectly a file
+from the tracker_info directory.
+2) The "Display in graphical form" button was disabled due to the
+fact that QtCharts did not want to display any graph windows when
+the total number of graph points saved in the tracker was less than 2.
+Above this number, the button is re enabled.
+3) If the program is executed from another directory, the program
+will lose its saved data because the program would not be able
+to find an existing tracker_info directory. If the program is unable
+to find an existing tracker_info directory, it will create a new one
+that is empty.
+4) Program crashes when the user enters a reserved character for file paths such
+as '/' '\' and ':'. '/' and '\' were handled, but ':' is still remaining to be
+handled.
